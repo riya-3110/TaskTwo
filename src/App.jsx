@@ -48,7 +48,6 @@ function App() {
 
     setArrayFormData([...arrayFormData, obj]);
 
-    // Add new city to dropdown if it's a new entry
     if (
       formData.city === "I will enter city name" &&
       formData.newCity.trim() !== ""
@@ -60,7 +59,6 @@ function App() {
       ]);
     }
 
-    // Add new hospital to the city-specific hospital list
     if (!hospitals[selectedCity]) {
       hospitals[selectedCity] = [];
     }
@@ -77,7 +75,6 @@ function App() {
       }));
     }
 
-    // Reset form
     setFormData({
       pName: "",
       pDate: "",
@@ -134,7 +131,6 @@ function App() {
         )}
         <br />
 
-        {/* Show hospital dropdown when city is selected OR when adding a new city */}
         {(formData.city && formData.city !== "Select City") ||
         formData.newCity ? (
           <>
